@@ -1,0 +1,166 @@
+/* Custom font and body styles */
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
+body {
+    background-color: #000;
+    color: #ff0000;
+    font-family: 'Nosifer', cursive;
+    text-align: center;
+    padding: 50px 0;
+    margin: 0;
+    overflow: auto; /* Allow scrolling */
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 2px solid #ff0000;
+    padding: 30px;
+    background: url('your-gif-url.gif') no-repeat center center / cover; /* Replace with your GIF URL */
+    box-shadow: 0 0 15px #ff0000;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 3em;
+    color: #ff0000;
+    text-shadow: 2px 2px 10px #ff0000;
+    margin-bottom: 20px;
+    animation: textColorChange 10s infinite; /* Color-changing animation for header */
+}
+
+.warning-text {
+    font-size: 2em;
+    color: red;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid red; /* Cursor effect */
+    animation: typing 4s steps(12, end) infinite alternate; /* Typing animation */
+    position: absolute;
+    top: 10px; /* Positioning at the top */
+    left: 50%;
+    transform: translateX(-50%); /* Centering horizontally */
+}
+
+/* Input and button styling */
+input, button {
+    padding: 15px;
+    font-size: 1.2em;
+    margin: 10px 0;
+    border: 1px solid #ff0000;
+    background: #333;
+    color: #ff0000;
+    width: 90%;
+    border-radius: 8px;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button {
+    cursor: pointer;
+    background-color: #333;
+}
+
+button:hover {
+    background-color: #444;
+    transform: scale(1.1); /* Button hover effect: scale */
+}
+
+/* Video player container */
+.video-container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+    flex-wrap: wrap;
+}
+
+.video-container iframe {
+    width: 320px;
+    height: 180px;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+/* FAB styles */
+.fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #ff0000;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    font-size: 24px;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+    animation: pulse 2s infinite; /* Added pulse animation */
+}
+
+.fab:hover {
+    background-color: #e60000;
+    transform: translateY(-10px); /* Smooth bounce effect on hover */
+}
+
+.fab-text {
+    display: none;
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    bottom: 70px; /* Position text above the FAB */
+    right: 50%;
+    transform: translateX(50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    animation: fadeIn 1s ease-in-out; /* Fade-in effect for text */
+}
+
+.fab:hover .fab-text {
+    display: block;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Fade-in text effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Color-changing animation for the header */
+@keyframes textColorChange {
+    0% { color: red; }
+    25% { color: green; }
+    50% { color: blue; }
+    75% { color: purple; }
+    100% { color: yellow; }
+}
+
+/* Typing animation for the warning text */
+@keyframes typing {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
