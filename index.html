@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Shorts Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet"> <!-- Nosifer font -->
+</head>
+<body>
+    <div class="container">
+        <div class="warning-text">Join OUR Channel ⚠️</div>
+        <h1>Md HR's YouTube Shorts</h1>
+        <form id="videoForm">
+            <input type="text" id="videoUrl" name="videoUrl" placeholder="Enter YouTube Shorts URL" required>
+            <button type="submit">Submit URL</button>
+        </form>
+    </div>
+
+    <!-- Video Container -->
+    <div id="videoContainer" class="video-container">
+        <!-- Videos will be dynamically added here -->
+    </div>
+
+    <!-- Telegram FAB icon -->
+    <a href="https://t.me/universe_teach" class="fab" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" style="width: 30px; height: 30px;">
+        <span class="fab-text">Join Us</span>
+    </a>
+
+    <script src="app.js"></script>
+</body>
+</html>
